@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1B2340"/>
+      <stop offset="1" stop-color="#0A0D1A"/>
+    </linearGradient>
+    <linearGradient id="fileBlue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6E9CFF"/>
+      <stop offset="1" stop-color="#3E63C9"/>
+    </linearGradient>
+    <linearGradient id="fileViolet" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#A48BFF"/>
+      <stop offset="1" stop-color="#6C4FD6"/>
+    </linearGradient>
+    <linearGradient id="fileTeal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5CF3D9"/>
+      <stop offset="1" stop-color="#20B79E"/>
+    </linearGradient>
+    <linearGradient id="ringTeal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3CFBDD"/>
+      <stop offset="1" stop-color="#22C7AC"/>
+    </linearGradient>
+    <linearGradient id="ringViolet" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#B39CFF"/>
+      <stop offset="1" stop-color="#7B5AE0"/>
+    </linearGradient>
+    <linearGradient id="ringSlate" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7C86AC"/>
+      <stop offset="1" stop-color="#565F80"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- app tile background -->
+  <rect x="8" y="8" width="240" height="240" rx="54" fill="url(#bgGrad)" stroke="#323C64" stroke-width="3"/>
+
+  <!-- stacked files -->
+  <g transform="translate(98,96) rotate(-13)">
+    <g transform="translate(-48,-62)">
+      <rect width="96" height="124" rx="14" fill="url(#fileBlue)"/>
+      <path d="M74,0 H96 V22 Z" fill="#FFFFFF" opacity="0.35"/>
+      <line x1="74" y1="0" x2="96" y2="22" stroke="#233156" stroke-width="2"/>
+      <rect x="16" y="58" width="56" height="7" rx="3.5" fill="#FFFFFF" opacity="0.4"/>
+      <rect x="16" y="74" width="64" height="7" rx="3.5" fill="#FFFFFF" opacity="0.28"/>
+      <rect x="16" y="90" width="44" height="7" rx="3.5" fill="#FFFFFF" opacity="0.28"/>
+    </g>
+  </g>
+
+  <g transform="translate(112,90) rotate(-3)">
+    <g transform="translate(-48,-62)">
+      <rect width="96" height="124" rx="14" fill="url(#fileViolet)"/>
+      <path d="M74,0 H96 V22 Z" fill="#FFFFFF" opacity="0.35"/>
+      <line x1="74" y1="0" x2="96" y2="22" stroke="#2A2156" stroke-width="2"/>
+      <rect x="16" y="58" width="56" height="7" rx="3.5" fill="#FFFFFF" opacity="0.4"/>
+      <rect x="16" y="74" width="64" height="7" rx="3.5" fill="#FFFFFF" opacity="0.28"/>
+      <rect x="16" y="90" width="44" height="7" rx="3.5" fill="#FFFFFF" opacity="0.28"/>
+    </g>
+  </g>
+
+  <g transform="translate(126,85) rotate(8)">
+    <g transform="translate(-48,-62)">
+      <rect width="96" height="124" rx="14" fill="url(#fileTeal)"/>
+      <path d="M74,0 H96 V22 Z" fill="#FFFFFF" opacity="0.4"/>
+      <line x1="74" y1="0" x2="96" y2="22" stroke="#0E3D35" stroke-width="2"/>
+      <rect x="16" y="58" width="56" height="7" rx="3.5" fill="#0E3D35" opacity="0.35"/>
+      <rect x="16" y="74" width="64" height="7" rx="3.5" fill="#0E3D35" opacity="0.22"/>
+      <rect x="16" y="90" width="44" height="7" rx="3.5" fill="#0E3D35" opacity="0.22"/>
+    </g>
+  </g>
+
+  <!-- donut-chart badge -->
+  <g filter="url(#glow)">
+    <circle cx="178" cy="178" r="57" fill="#10152A"/>
+    <path d="M 178,126 A 52,52 0 0 1 194.07,227.46 L 186.65,204.63 A 28,28 0 0 0 178,150 Z"
+          fill="url(#ringTeal)" stroke="#10152A" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M 194.07,227.46 A 52,52 0 0 1 128.54,161.93 L 151.37,169.35 A 28,28 0 0 0 186.65,204.63 Z"
+          fill="url(#ringViolet)" stroke="#10152A" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M 128.54,161.93 A 52,52 0 0 1 178,126 L 178,150 A 28,28 0 0 0 151.37,169.35 Z"
+          fill="url(#ringSlate)" stroke="#10152A" stroke-width="3" stroke-linejoin="round"/>
+  </g>
+</svg>
